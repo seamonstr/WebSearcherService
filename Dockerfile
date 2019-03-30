@@ -1,9 +1,9 @@
 FROM openjdk:11-jdk
-RUN mkdir -p /usr/local/GoogleSearcher
-WORKDIR /usr/local/GoogleSearcher
+RUN mkdir -p /usr/local/WebSearcher
+WORKDIR /usr/local/WebSearcher
 
 ARG JAR_FILE=foo
-ADD target/${JAR_FILE} /usr/local/GoogleSearcher/service.jar
+ADD target/${JAR_FILE} /usr/local/WebSearcher/service.jar
 
 EXPOSE 8080
 ADD src/main/docker/run.sh run.sh

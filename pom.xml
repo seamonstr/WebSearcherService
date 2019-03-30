@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.redcabbage</groupId>
-	<artifactId>GoogleSearcher</artifactId>
+	<artifactId>WebSearcher</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>GoogleSearcher</name>
-	<description>Google searching proxy</description>
+	<name>WebSearcher</name>
+	<description>Web search service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -18,7 +18,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<start-class>org.redcabbage.GoogleSearcher.GoogleSearcherApplication</start-class>
+		<start-class>org.redcabbage.WebSearcher.WebSearcherApplication</start-class>
 
 	</properties>
 
@@ -35,6 +35,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -60,7 +72,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>org.redcabbage.google-searcher</repository>
+					<repository>org.redcabbage.websearcher</repository>
 					<tag>latest</tag>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
